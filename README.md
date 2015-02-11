@@ -12,3 +12,7 @@ Voodoo Donut Demand
 9. Later realized assignment was specific to use of constructor function so changed the code so it was using the constructor function and my issue related to total number of donusts per day was also fixed since function ran on each location and previously i was running time forloop on [places].
 10. Now wanted to print the output thru html file.
 11. After being pointed to the right direction by Ryan Sobol and discussing with Nicholas Peters was able to get the first draft of html output which does not look pretty at all. (Feb 9 2015)
+12. Made additional changes to the voodoo JS.
+13. Made changes to html
+14. Added evenlistener to JS and buttons to html.
+15.Feb 11 2015
