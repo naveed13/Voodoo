@@ -4,9 +4,7 @@ body {
 }
 
 td {
-border-style: 1px solid black;
-text-indent: justify;
-
+border: 1px solid black;
 
 }
 
