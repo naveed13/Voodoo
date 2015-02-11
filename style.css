@@ -1,5 +1,14 @@
-td {
-    border:1px solid black;
-    width:500px;
+body {
+  font-family:monospace;
+  font-size: 20px;
 }
+
+td {
+border-style: 1px solid black;
+text-indent: justify;
+
+
+}
+
+
 
