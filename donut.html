@@ -1,69 +1,33 @@
 <!DOCTYPE>
 <html>
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <title> Voodoo Donut Demand </title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title> Voodoo Donut Demand </title>
+  </head>
+  <body>
+    <header> Donuts Daily Forcast </header>
 
-<header> Donuts Daily Forcast </header>
+    <p></p>
 
-<p></p>
-<tr>
-<button id="Down">Downtown</button>
-<button id="Capitol">Capitol Hill</button>
-<button id="South">South Lake</button>
-<button id="Wedge">Wedgewood</button>
-<button id="Ball">Ballard</button>
-</tr>
-<p></p>
+    <table>
+      <tr>
+        <button id="Down">Downtown</button>
+        <button id="Capitol">Capitol Hill</button>
+        <button id="South">South Lake</button>
+        <button id="Wedge">Wedgewood</button>
+        <button id="Ball">Ballard</button>
+      </tr>
+    </table>
 
-<!-- <tr>
-<button id="Downtown">Downtown</button>
-<button id="CapitolHill">Capitol Hill</button>
-<button id="SouthLake">South Lake</button>
-<button id="Wedgewood">Wedgewood</button>
-<button id="Ballard">Ballard</button>
-</tr> -->
-<p></p>
-<tr>
-<td>
-<th>7am</th>
-<th>8am</th>
-<th>9am</th>
-<th>10am</th>
-<th>11am</th>
-<th>12am</th>
-<th>01pm</th>
-<th>02pm</th>
-<th>03pm</th>
-<th>04pm</th>
-<th>05am</th>
-<th>06pm</th>
-<th>07pm</th>
-</td>
-</tr>
+    <p></p>
 
+    <table id="place">
+      <tr id="time"></tr>
+      <tr id="hourly"></tr>
+      <tr id="Total"></tr>
+    </table>
 
-<table id = "place">
-
-<tr id = "location"></tr>
-<tr id = "time"></tr>
-<tr id = "hourly"></tr>
-<tr id = "Total"></tr>
-</table>
-
-<table id = "place">
-
-<tr id = "CapitolHill6"></tr>
-<tr id = "CapitolHill7"></tr>
-<tr id = "CapitolHill8"></tr>
-<tr id = "CapitolHill9"></tr>
-</table>
-
-
-
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
