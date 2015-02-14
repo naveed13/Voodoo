@@ -4,7 +4,6 @@ function Location(loc, hours, footTraffic, percentEnter, donutsPerPerson) {
   this.footTraffic = footTraffic;
   this.percentEnter = percentEnter;
   this.donutsPerPerson = donutsPerPerson;
-  var total = 0;
 
   this.findRandom = function() {
     var randomNumber = Math.floor((Math.random() * (this.footTraffic[1] - this.footTraffic[0] + 1)) + this.footTraffic[0]);
@@ -12,91 +11,68 @@ function Location(loc, hours, footTraffic, percentEnter, donutsPerPerson) {
   }
 
   this.donutHourly = function() {
-    var tableRow1 = document.getElementById("time");
-    var rowCell1 = document.createElement("td");
-    rowCell1.textContent = this.loc;
-    tableRow1.appendChild(rowCell1);
+    var total = 0;
+    var tableEl = document.getElementById("donuts");
+    tableEl.style.display = "block";
 
-    var tableRow1 = document.getElementById("hourly");
-    var rowCell1 = document.createElement("td");
-    tableRow1.appendChild(rowCell1);
+    var rowEl = document.createElement("tr");
+    tableEl.appendChild(rowEl);
+
+    var cellEl = document.createElement("td");
+    cellEl.textContent = this.loc;
+    rowEl.appendChild(cellEl);
+
 
     for (var i = this.hours[0]; i <= this.hours[1]; i++) {
-      var randomNumber=this.findRandom(this.footTraffic);
+      var randomNumber = this.findRandom(this.footTraffic);
       var traffic = percentEnter / 100;
-      var peopleEnter = Math.round(randomNumber*traffic);
-      var donutPerHour = Math.round(this.donutsPerPerson*peopleEnter);
-      var time;
-
-      if (i > 12) {
-        time = i - 12 +":00pm";
-      } else {
-        time = i + ":00am";
-      }
+      var peopleEnter = Math.round(randomNumber * traffic);
+      var donutPerHour = Math.round(this.donutsPerPerson * peopleEnter);
 
       total += donutPerHour;
 
-      var tableRow2 = document.getElementById("time");
-      var rowCell2 = document.createElement("td");
-      rowCell2.textContent = time;
-      tableRow2.appendChild(rowCell2);
+      var cellEl = document.createElement("td");
+      cellEl.textContent = donutPerHour;
+      rowEl.appendChild(cellEl);
+    }
 
-      var tableRow3 = document.getElementById("hourly");
-      var rowCell3 = document.createElement("td");
-      rowCell3.textContent = donutPerHour;
-      tableRow3.appendChild(rowCell3);
-   }
-
-    var tableRow1 = document.getElementById("time");
-    var rowCell1 = document.createElement("td");
-    rowCell1.textContent = "Total";
-    tableRow1.appendChild(rowCell1);
-
-    var tableRow4 = document.getElementById("hourly");
-    var rowCell4 = document.createElement("td");
-    rowCell4.textContent = total;
-    tableRow4.appendChild(rowCell4);
+    var cellEl = document.createElement("td");
+    cellEl.textContent = total;
+    rowEl.appendChild(cellEl);
   };
 }
 
 //------------------Event Listner Part Below-----------------------//
-//------------------?? Possibility of for loop ??------------------//
-//-----------------------------------------------------------------//
 
 function runAppDowntown() {
   var region = new Location("Downtown", [6, 18], [80, 220], 10, 4);
   region.donutHourly();
-  // region.donutTotalPerDay();
-  document.getElementById("Downtown").disabled = true;
+  document.getElementById("Down").disabled = true;
 }
 
 function runAppCapitolHill() {
   var region = new Location("Capitol Hill", [6, 18], [5,45], 45, 2);
   region.donutHourly();
-  // region.donutTotalPerDay();
-  document.getElementById("CapitolHill").disabled = true;
+  document.getElementById("Capitol").disabled = true;
 
 }
 
 function runAppSouthLake() {
   var region = new Location("South Lake", [6, 18], [80, 250], 5, 6);
   region.donutHourly();
-  // region.donutTotalPerDay();
-  document.getElementById("SouthLake").disabled = true;
+  document.getElementById("South").disabled = true;
 }
 
 function runAppWedgewood() {
   var region = new Location("Wedgewood", [6, 18], [20, 60], 20, 1.5);
   region.donutHourly();
-  // region.donutTotalPerDay();
-  document.getElementById("Wedgewood").disabled = true;
+  document.getElementById("Wedge").disabled = true;
 }
 
 function runAppBallard() {
   var region = new Location("Ballard", [6, 18], [25, 175], 33, 1);
   region.donutHourly();
-  // region.donutTotalPerDay();
-  document.getElementById("Ballard").disabled = true;
+  document.getElementById("Ball").disabled = true;
 }
 
 document.getElementById("Down").addEventListener("click", runAppDowntown);
@@ -104,3 +80,19 @@ document.getElementById("Capitol").addEventListener("click", runAppCapitolHill);
 document.getElementById("South").addEventListener("click", runAppSouthLake);
 document.getElementById("Wedge").addEventListener("click", runAppWedgewood);
 document.getElementById("Ball").addEventListener("click", runAppBallard);
+
+
+var myDate = new Date();
+var putDate = document.getElementById("date");
+putDate.textContent = myDate;
+
+
+function myFunction() {
+    location.reload();
+}
+
+document.getElementById("reLoad").addEventListener("click", myFunction);
+
+
+
+

@@ -6,28 +6,50 @@
     <title> Voodoo Donut Demand </title>
   </head>
   <body>
-    <header> Donuts Daily Forcast </header>
-
-    <p></p>
-
-    <table>
-      <tr>
-        <button id="Down">Downtown</button>
-        <button id="Capitol">Capitol Hill</button>
-        <button id="South">South Lake</button>
-        <button id="Wedge">Wedgewood</button>
-        <button id="Ball">Ballard</button>
+    <nav id="navigationBar">
+      <ul>
+        <li><a href=“#”> Contact </a></li>
+        <li><a href=“#”> About Us </a></li>
+        <li><a href=“#”> Home </a></li>
+      </ul>
+      <header> Super Hero Donuts Daily Forcast </header>
+        <div>
+          <button id="Down">Downtown</button>
+          <button id="Capitol">Capitol Hill</button>
+          <button id="South">South Lake</button>
+          <button id="Wedge">Wedgewood</button>
+          <button id="Ball">Ballard</button>
+          <button id="reLoad">Reload</button>
+        </div>
+    </nav>
+    <table id="donuts">
+      <tr id="time">
+        <td id ="date"></td>
+        <td>07:00am</td>
+        <td>08:00am</td>
+        <td>09:00am</td>
+        <td>10:00am</td>
+        <td>11:00am</td>
+        <td>12:00am</td>
+        <td>01:00pm</td>
+        <td>02:00pm</td>
+        <td>03:00pm</td>
+        <td>04:00pm</td>
+        <td>05:00pm</td>
+        <td>06:00pm</td>
+        <td>07:00pm</td>
+        <td>Total</td>
       </tr>
     </table>
-
-    <p></p>
-
-    <table id="place">
-      <tr id="time"></tr>
-      <tr id="hourly"></tr>
-      <tr id="Total"></tr>
-    </table>
-
+    <div>
+      <a href="http://www.facebook.com"><div id="circle1"></div></a>
+      <a href="http://www.twitter.com"><div id="circle2"></div></a>
+    </div>
     <script src="main.js"></script>
+    <div class="showbox1 rotate"></div>
+    <div class="showbox2 scale"></div>
+    <div class="footer expand"></div>
+
+
   </body>
 </html>
