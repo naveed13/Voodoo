@@ -13,6 +13,7 @@ header {
   font-size: 30px;
   font-family: Oswald;
   padding: 10px;
+  margin-left: 210px;
 }
 
 a, a:visited, a:hover, a:active {
@@ -32,7 +33,7 @@ li {
 }
 
 body {
-  background-image: url("navImage.jpg");
+  /*background-image: url("navImage.jpg");*/
   width:90%;
   margin:0 auto;
   font-family: Oswald;
@@ -110,8 +111,11 @@ td:hover {
   border-radius: 10px;
   position: fixed;
   margin-top: 5px;
-  background-image: url("donut.jpg");
-  background-size: contain;
+  margin-left: 300px;
+  /*background-color:#add8e6;*/
+  font-size: 50px;
+  text-align: center;
+  z-index: 5px;
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
@@ -153,11 +157,13 @@ td:hover {
   width: 200px;
   height:200px;
   margin-top: 150px;
+  margin-left: 10px;
   float: left;
   border: 2px solid green;
   border-radius: 10px;
-  background-image: url("kids.jpg");
-  background-size: contain;
+  background-color: #add8e6;
+  font-size: 50px;
+  text-align: center;
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
@@ -171,7 +177,6 @@ td:hover {
   -ms-transform: scale(2);
   transform: scale(2);
 }
-
 
 
 
